@@ -9,38 +9,343 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WishlistRouteImport } from './routes/wishlist'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as RequestAProductRouteImport } from './routes/request-a-product'
+import { Route as OriginalsRouteImport } from './routes/originals'
+import { Route as JournalRouteImport } from './routes/journal'
+import { Route as FindMyProductRouteImport } from './routes/find-my-product'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as CartRouteImport } from './routes/cart'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ShopCategoryRouteImport } from './routes/shop.$category'
+import { Route as ProductSlugRouteImport } from './routes/product.$slug'
+import { Route as LegalTermsRouteImport } from './routes/legal.terms'
+import { Route as LegalShippingRouteImport } from './routes/legal.shipping'
+import { Route as LegalReturnsRouteImport } from './routes/legal.returns'
+import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
+import { Route as JournalSlugRouteImport } from './routes/journal.$slug'
+import { Route as ShopFacetSlugRouteImport } from './routes/shop.$facet.$slug'
 
+const WishlistRoute = WishlistRouteImport.update({
+  id: '/wishlist',
+  path: '/wishlist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestAProductRoute = RequestAProductRouteImport.update({
+  id: '/request-a-product',
+  path: '/request-a-product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OriginalsRoute = OriginalsRouteImport.update({
+  id: '/originals',
+  path: '/originals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JournalRoute = JournalRouteImport.update({
+  id: '/journal',
+  path: '/journal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FindMyProductRoute = FindMyProductRouteImport.update({
+  id: '/find-my-product',
+  path: '/find-my-product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CartRoute = CartRouteImport.update({
+  id: '/cart',
+  path: '/cart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShopCategoryRoute = ShopCategoryRouteImport.update({
+  id: '/$category',
+  path: '/$category',
+  getParentRoute: () => ShopRoute,
+} as any)
+const ProductSlugRoute = ProductSlugRouteImport.update({
+  id: '/product/$slug',
+  path: '/product/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalTermsRoute = LegalTermsRouteImport.update({
+  id: '/legal/terms',
+  path: '/legal/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalShippingRoute = LegalShippingRouteImport.update({
+  id: '/legal/shipping',
+  path: '/legal/shipping',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalReturnsRoute = LegalReturnsRouteImport.update({
+  id: '/legal/returns',
+  path: '/legal/returns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalPrivacyRoute = LegalPrivacyRouteImport.update({
+  id: '/legal/privacy',
+  path: '/legal/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JournalSlugRoute = JournalSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => JournalRoute,
+} as any)
+const ShopFacetSlugRoute = ShopFacetSlugRouteImport.update({
+  id: '/$facet/$slug',
+  path: '/$facet/$slug',
+  getParentRoute: () => ShopRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/find-my-product': typeof FindMyProductRoute
+  '/journal': typeof JournalRouteWithChildren
+  '/originals': typeof OriginalsRoute
+  '/request-a-product': typeof RequestAProductRoute
+  '/shop': typeof ShopRouteWithChildren
+  '/wishlist': typeof WishlistRoute
+  '/journal/$slug': typeof JournalSlugRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/returns': typeof LegalReturnsRoute
+  '/legal/shipping': typeof LegalShippingRoute
+  '/legal/terms': typeof LegalTermsRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/shop/$category': typeof ShopCategoryRoute
+  '/shop/$facet/$slug': typeof ShopFacetSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/find-my-product': typeof FindMyProductRoute
+  '/journal': typeof JournalRouteWithChildren
+  '/originals': typeof OriginalsRoute
+  '/request-a-product': typeof RequestAProductRoute
+  '/shop': typeof ShopRouteWithChildren
+  '/wishlist': typeof WishlistRoute
+  '/journal/$slug': typeof JournalSlugRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/returns': typeof LegalReturnsRoute
+  '/legal/shipping': typeof LegalShippingRoute
+  '/legal/terms': typeof LegalTermsRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/shop/$category': typeof ShopCategoryRoute
+  '/shop/$facet/$slug': typeof ShopFacetSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/cart': typeof CartRoute
+  '/checkout': typeof CheckoutRoute
+  '/contact': typeof ContactRoute
+  '/find-my-product': typeof FindMyProductRoute
+  '/journal': typeof JournalRouteWithChildren
+  '/originals': typeof OriginalsRoute
+  '/request-a-product': typeof RequestAProductRoute
+  '/shop': typeof ShopRouteWithChildren
+  '/wishlist': typeof WishlistRoute
+  '/journal/$slug': typeof JournalSlugRoute
+  '/legal/privacy': typeof LegalPrivacyRoute
+  '/legal/returns': typeof LegalReturnsRoute
+  '/legal/shipping': typeof LegalShippingRoute
+  '/legal/terms': typeof LegalTermsRoute
+  '/product/$slug': typeof ProductSlugRoute
+  '/shop/$category': typeof ShopCategoryRoute
+  '/shop/$facet/$slug': typeof ShopFacetSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/cart'
+    | '/checkout'
+    | '/contact'
+    | '/find-my-product'
+    | '/journal'
+    | '/originals'
+    | '/request-a-product'
+    | '/shop'
+    | '/wishlist'
+    | '/journal/$slug'
+    | '/legal/privacy'
+    | '/legal/returns'
+    | '/legal/shipping'
+    | '/legal/terms'
+    | '/product/$slug'
+    | '/shop/$category'
+    | '/shop/$facet/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/cart'
+    | '/checkout'
+    | '/contact'
+    | '/find-my-product'
+    | '/journal'
+    | '/originals'
+    | '/request-a-product'
+    | '/shop'
+    | '/wishlist'
+    | '/journal/$slug'
+    | '/legal/privacy'
+    | '/legal/returns'
+    | '/legal/shipping'
+    | '/legal/terms'
+    | '/product/$slug'
+    | '/shop/$category'
+    | '/shop/$facet/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/cart'
+    | '/checkout'
+    | '/contact'
+    | '/find-my-product'
+    | '/journal'
+    | '/originals'
+    | '/request-a-product'
+    | '/shop'
+    | '/wishlist'
+    | '/journal/$slug'
+    | '/legal/privacy'
+    | '/legal/returns'
+    | '/legal/shipping'
+    | '/legal/terms'
+    | '/product/$slug'
+    | '/shop/$category'
+    | '/shop/$facet/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CartRoute: typeof CartRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ContactRoute: typeof ContactRoute
+  FindMyProductRoute: typeof FindMyProductRoute
+  JournalRoute: typeof JournalRouteWithChildren
+  OriginalsRoute: typeof OriginalsRoute
+  RequestAProductRoute: typeof RequestAProductRoute
+  ShopRoute: typeof ShopRouteWithChildren
+  WishlistRoute: typeof WishlistRoute
+  LegalPrivacyRoute: typeof LegalPrivacyRoute
+  LegalReturnsRoute: typeof LegalReturnsRoute
+  LegalShippingRoute: typeof LegalShippingRoute
+  LegalTermsRoute: typeof LegalTermsRoute
+  ProductSlugRoute: typeof ProductSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wishlist': {
+      id: '/wishlist'
+      path: '/wishlist'
+      fullPath: '/wishlist'
+      preLoaderRoute: typeof WishlistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-a-product': {
+      id: '/request-a-product'
+      path: '/request-a-product'
+      fullPath: '/request-a-product'
+      preLoaderRoute: typeof RequestAProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/originals': {
+      id: '/originals'
+      path: '/originals'
+      fullPath: '/originals'
+      preLoaderRoute: typeof OriginalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journal': {
+      id: '/journal'
+      path: '/journal'
+      fullPath: '/journal'
+      preLoaderRoute: typeof JournalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/find-my-product': {
+      id: '/find-my-product'
+      path: '/find-my-product'
+      fullPath: '/find-my-product'
+      preLoaderRoute: typeof FindMyProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cart': {
+      id: '/cart'
+      path: '/cart'
+      fullPath: '/cart'
+      preLoaderRoute: typeof CartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +353,105 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shop/$category': {
+      id: '/shop/$category'
+      path: '/$category'
+      fullPath: '/shop/$category'
+      preLoaderRoute: typeof ShopCategoryRouteImport
+      parentRoute: typeof ShopRoute
+    }
+    '/product/$slug': {
+      id: '/product/$slug'
+      path: '/product/$slug'
+      fullPath: '/product/$slug'
+      preLoaderRoute: typeof ProductSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/terms': {
+      id: '/legal/terms'
+      path: '/legal/terms'
+      fullPath: '/legal/terms'
+      preLoaderRoute: typeof LegalTermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/shipping': {
+      id: '/legal/shipping'
+      path: '/legal/shipping'
+      fullPath: '/legal/shipping'
+      preLoaderRoute: typeof LegalShippingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/returns': {
+      id: '/legal/returns'
+      path: '/legal/returns'
+      fullPath: '/legal/returns'
+      preLoaderRoute: typeof LegalReturnsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/privacy': {
+      id: '/legal/privacy'
+      path: '/legal/privacy'
+      fullPath: '/legal/privacy'
+      preLoaderRoute: typeof LegalPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journal/$slug': {
+      id: '/journal/$slug'
+      path: '/$slug'
+      fullPath: '/journal/$slug'
+      preLoaderRoute: typeof JournalSlugRouteImport
+      parentRoute: typeof JournalRoute
+    }
+    '/shop/$facet/$slug': {
+      id: '/shop/$facet/$slug'
+      path: '/$facet/$slug'
+      fullPath: '/shop/$facet/$slug'
+      preLoaderRoute: typeof ShopFacetSlugRouteImport
+      parentRoute: typeof ShopRoute
+    }
   }
 }
 
+interface JournalRouteChildren {
+  JournalSlugRoute: typeof JournalSlugRoute
+}
+
+const JournalRouteChildren: JournalRouteChildren = {
+  JournalSlugRoute: JournalSlugRoute,
+}
+
+const JournalRouteWithChildren =
+  JournalRoute._addFileChildren(JournalRouteChildren)
+
+interface ShopRouteChildren {
+  ShopCategoryRoute: typeof ShopCategoryRoute
+  ShopFacetSlugRoute: typeof ShopFacetSlugRoute
+}
+
+const ShopRouteChildren: ShopRouteChildren = {
+  ShopCategoryRoute: ShopCategoryRoute,
+  ShopFacetSlugRoute: ShopFacetSlugRoute,
+}
+
+const ShopRouteWithChildren = ShopRoute._addFileChildren(ShopRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CartRoute: CartRoute,
+  CheckoutRoute: CheckoutRoute,
+  ContactRoute: ContactRoute,
+  FindMyProductRoute: FindMyProductRoute,
+  JournalRoute: JournalRouteWithChildren,
+  OriginalsRoute: OriginalsRoute,
+  RequestAProductRoute: RequestAProductRoute,
+  ShopRoute: ShopRouteWithChildren,
+  WishlistRoute: WishlistRoute,
+  LegalPrivacyRoute: LegalPrivacyRoute,
+  LegalReturnsRoute: LegalReturnsRoute,
+  LegalShippingRoute: LegalShippingRoute,
+  LegalTermsRoute: LegalTermsRoute,
+  ProductSlugRoute: ProductSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
