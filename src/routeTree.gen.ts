@@ -22,12 +22,19 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ShopCategoryRouteImport } from './routes/shop.$category'
 import { Route as ProductSlugRouteImport } from './routes/product.$slug'
+import { Route as LpResellerRouteImport } from './routes/lp.reseller'
+import { Route as LpRequestFunnelRouteImport } from './routes/lp.request-funnel'
+import { Route as LpQuizFunnelRouteImport } from './routes/lp.quiz-funnel'
+import { Route as LpGiftsRouteImport } from './routes/lp.gifts'
+import { Route as LpDateNightRouteImport } from './routes/lp.date-night'
+import { Route as LpArabianOilsRouteImport } from './routes/lp.arabian-oils'
 import { Route as LegalTermsRouteImport } from './routes/legal.terms'
 import { Route as LegalShippingRouteImport } from './routes/legal.shipping'
 import { Route as LegalReturnsRouteImport } from './routes/legal.returns'
 import { Route as LegalPrivacyRouteImport } from './routes/legal.privacy'
 import { Route as JournalSlugRouteImport } from './routes/journal.$slug'
 import { Route as ShopFacetSlugRouteImport } from './routes/shop.$facet.$slug'
+import { Route as LpProductSlugRouteImport } from './routes/lp.product.$slug'
 
 const WishlistRoute = WishlistRouteImport.update({
   id: '/wishlist',
@@ -94,6 +101,36 @@ const ProductSlugRoute = ProductSlugRouteImport.update({
   path: '/product/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LpResellerRoute = LpResellerRouteImport.update({
+  id: '/lp/reseller',
+  path: '/lp/reseller',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpRequestFunnelRoute = LpRequestFunnelRouteImport.update({
+  id: '/lp/request-funnel',
+  path: '/lp/request-funnel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpQuizFunnelRoute = LpQuizFunnelRouteImport.update({
+  id: '/lp/quiz-funnel',
+  path: '/lp/quiz-funnel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpGiftsRoute = LpGiftsRouteImport.update({
+  id: '/lp/gifts',
+  path: '/lp/gifts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpDateNightRoute = LpDateNightRouteImport.update({
+  id: '/lp/date-night',
+  path: '/lp/date-night',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpArabianOilsRoute = LpArabianOilsRouteImport.update({
+  id: '/lp/arabian-oils',
+  path: '/lp/arabian-oils',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LegalTermsRoute = LegalTermsRouteImport.update({
   id: '/legal/terms',
   path: '/legal/terms',
@@ -124,6 +161,11 @@ const ShopFacetSlugRoute = ShopFacetSlugRouteImport.update({
   path: '/$facet/$slug',
   getParentRoute: () => ShopRoute,
 } as any)
+const LpProductSlugRoute = LpProductSlugRouteImport.update({
+  id: '/lp/product/$slug',
+  path: '/lp/product/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -142,8 +184,15 @@ export interface FileRoutesByFullPath {
   '/legal/returns': typeof LegalReturnsRoute
   '/legal/shipping': typeof LegalShippingRoute
   '/legal/terms': typeof LegalTermsRoute
+  '/lp/arabian-oils': typeof LpArabianOilsRoute
+  '/lp/date-night': typeof LpDateNightRoute
+  '/lp/gifts': typeof LpGiftsRoute
+  '/lp/quiz-funnel': typeof LpQuizFunnelRoute
+  '/lp/request-funnel': typeof LpRequestFunnelRoute
+  '/lp/reseller': typeof LpResellerRoute
   '/product/$slug': typeof ProductSlugRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/lp/product/$slug': typeof LpProductSlugRoute
   '/shop/$facet/$slug': typeof ShopFacetSlugRoute
 }
 export interface FileRoutesByTo {
@@ -163,8 +212,15 @@ export interface FileRoutesByTo {
   '/legal/returns': typeof LegalReturnsRoute
   '/legal/shipping': typeof LegalShippingRoute
   '/legal/terms': typeof LegalTermsRoute
+  '/lp/arabian-oils': typeof LpArabianOilsRoute
+  '/lp/date-night': typeof LpDateNightRoute
+  '/lp/gifts': typeof LpGiftsRoute
+  '/lp/quiz-funnel': typeof LpQuizFunnelRoute
+  '/lp/request-funnel': typeof LpRequestFunnelRoute
+  '/lp/reseller': typeof LpResellerRoute
   '/product/$slug': typeof ProductSlugRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/lp/product/$slug': typeof LpProductSlugRoute
   '/shop/$facet/$slug': typeof ShopFacetSlugRoute
 }
 export interface FileRoutesById {
@@ -185,8 +241,15 @@ export interface FileRoutesById {
   '/legal/returns': typeof LegalReturnsRoute
   '/legal/shipping': typeof LegalShippingRoute
   '/legal/terms': typeof LegalTermsRoute
+  '/lp/arabian-oils': typeof LpArabianOilsRoute
+  '/lp/date-night': typeof LpDateNightRoute
+  '/lp/gifts': typeof LpGiftsRoute
+  '/lp/quiz-funnel': typeof LpQuizFunnelRoute
+  '/lp/request-funnel': typeof LpRequestFunnelRoute
+  '/lp/reseller': typeof LpResellerRoute
   '/product/$slug': typeof ProductSlugRoute
   '/shop/$category': typeof ShopCategoryRoute
+  '/lp/product/$slug': typeof LpProductSlugRoute
   '/shop/$facet/$slug': typeof ShopFacetSlugRoute
 }
 export interface FileRouteTypes {
@@ -208,8 +271,15 @@ export interface FileRouteTypes {
     | '/legal/returns'
     | '/legal/shipping'
     | '/legal/terms'
+    | '/lp/arabian-oils'
+    | '/lp/date-night'
+    | '/lp/gifts'
+    | '/lp/quiz-funnel'
+    | '/lp/request-funnel'
+    | '/lp/reseller'
     | '/product/$slug'
     | '/shop/$category'
+    | '/lp/product/$slug'
     | '/shop/$facet/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -229,8 +299,15 @@ export interface FileRouteTypes {
     | '/legal/returns'
     | '/legal/shipping'
     | '/legal/terms'
+    | '/lp/arabian-oils'
+    | '/lp/date-night'
+    | '/lp/gifts'
+    | '/lp/quiz-funnel'
+    | '/lp/request-funnel'
+    | '/lp/reseller'
     | '/product/$slug'
     | '/shop/$category'
+    | '/lp/product/$slug'
     | '/shop/$facet/$slug'
   id:
     | '__root__'
@@ -250,8 +327,15 @@ export interface FileRouteTypes {
     | '/legal/returns'
     | '/legal/shipping'
     | '/legal/terms'
+    | '/lp/arabian-oils'
+    | '/lp/date-night'
+    | '/lp/gifts'
+    | '/lp/quiz-funnel'
+    | '/lp/request-funnel'
+    | '/lp/reseller'
     | '/product/$slug'
     | '/shop/$category'
+    | '/lp/product/$slug'
     | '/shop/$facet/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -271,7 +355,14 @@ export interface RootRouteChildren {
   LegalReturnsRoute: typeof LegalReturnsRoute
   LegalShippingRoute: typeof LegalShippingRoute
   LegalTermsRoute: typeof LegalTermsRoute
+  LpArabianOilsRoute: typeof LpArabianOilsRoute
+  LpDateNightRoute: typeof LpDateNightRoute
+  LpGiftsRoute: typeof LpGiftsRoute
+  LpQuizFunnelRoute: typeof LpQuizFunnelRoute
+  LpRequestFunnelRoute: typeof LpRequestFunnelRoute
+  LpResellerRoute: typeof LpResellerRoute
   ProductSlugRoute: typeof ProductSlugRoute
+  LpProductSlugRoute: typeof LpProductSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -367,6 +458,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lp/reseller': {
+      id: '/lp/reseller'
+      path: '/lp/reseller'
+      fullPath: '/lp/reseller'
+      preLoaderRoute: typeof LpResellerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/request-funnel': {
+      id: '/lp/request-funnel'
+      path: '/lp/request-funnel'
+      fullPath: '/lp/request-funnel'
+      preLoaderRoute: typeof LpRequestFunnelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/quiz-funnel': {
+      id: '/lp/quiz-funnel'
+      path: '/lp/quiz-funnel'
+      fullPath: '/lp/quiz-funnel'
+      preLoaderRoute: typeof LpQuizFunnelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/gifts': {
+      id: '/lp/gifts'
+      path: '/lp/gifts'
+      fullPath: '/lp/gifts'
+      preLoaderRoute: typeof LpGiftsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/date-night': {
+      id: '/lp/date-night'
+      path: '/lp/date-night'
+      fullPath: '/lp/date-night'
+      preLoaderRoute: typeof LpDateNightRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp/arabian-oils': {
+      id: '/lp/arabian-oils'
+      path: '/lp/arabian-oils'
+      fullPath: '/lp/arabian-oils'
+      preLoaderRoute: typeof LpArabianOilsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/legal/terms': {
       id: '/legal/terms'
       path: '/legal/terms'
@@ -408,6 +541,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/shop/$facet/$slug'
       preLoaderRoute: typeof ShopFacetSlugRouteImport
       parentRoute: typeof ShopRoute
+    }
+    '/lp/product/$slug': {
+      id: '/lp/product/$slug'
+      path: '/lp/product/$slug'
+      fullPath: '/lp/product/$slug'
+      preLoaderRoute: typeof LpProductSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
@@ -451,7 +591,14 @@ const rootRouteChildren: RootRouteChildren = {
   LegalReturnsRoute: LegalReturnsRoute,
   LegalShippingRoute: LegalShippingRoute,
   LegalTermsRoute: LegalTermsRoute,
+  LpArabianOilsRoute: LpArabianOilsRoute,
+  LpDateNightRoute: LpDateNightRoute,
+  LpGiftsRoute: LpGiftsRoute,
+  LpQuizFunnelRoute: LpQuizFunnelRoute,
+  LpRequestFunnelRoute: LpRequestFunnelRoute,
+  LpResellerRoute: LpResellerRoute,
   ProductSlugRoute: ProductSlugRoute,
+  LpProductSlugRoute: LpProductSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
