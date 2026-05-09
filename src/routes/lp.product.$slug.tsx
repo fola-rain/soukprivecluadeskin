@@ -47,7 +47,7 @@ function ProductLanding() {
       title={<>{product.name.split(" ")[0]} <em style={{ color: "rgba(245,240,232,0.6)" }}>{product.name.split(" ").slice(1).join(" ")}</em></>}
       intro={product.description}
       hero={product.image}
-      primaryCta={{ label: "View the Product", to: "/product/$slug" as any }}
+      primaryCta={{ label: "Browse Similar", to: "/shop" }}
       secondaryCta={{ label: "Find your scent", to: "/find-my-product" }}
       whatsappMessage={`Hello — I'm interested in ${product.name} by ${product.brand}.`}
       products={related}
