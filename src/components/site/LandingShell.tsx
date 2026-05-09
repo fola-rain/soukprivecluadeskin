@@ -48,8 +48,8 @@ export function LandingShell(p: LandingProps) {
             {p.intro}
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link to={p.primaryCta.to} className="btn-outline">{p.primaryCta.label} <ArrowRight size={11} /></Link>
-            {p.secondaryCta && <Link to={p.secondaryCta.to} className="btn-text">{p.secondaryCta.label} →</Link>}
+            <Link to={p.primaryCta.to as any} className="btn-outline">{p.primaryCta.label} <ArrowRight size={11} /></Link>
+            {p.secondaryCta && <Link to={p.secondaryCta.to as any} className="btn-text">{p.secondaryCta.label} →</Link>}
             <a href={wa} target="_blank" rel="noreferrer" className="btn-text" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
               <MessageCircle size={14} strokeWidth={1.25} /> Concierge on WhatsApp
             </a>
@@ -90,7 +90,7 @@ export function LandingShell(p: LandingProps) {
             <div className="eyebrow dim">The Edit</div>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 48, flexWrap: "wrap", gap: 16 }}>
               <h2 className="section-hl" style={{ maxWidth: 600 }}>Selected for <em>this</em> moment.</h2>
-              <Link to={p.primaryCta.to} className="btn-text">View all →</Link>
+              <Link to={p.primaryCta.to as any} className="btn-text">View all →</Link>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 32 }}>
               {p.products.slice(0, 4).map((pr) => (<ProductCard key={pr.slug} product={pr} />))}
@@ -140,7 +140,7 @@ export function LandingShell(p: LandingProps) {
           A bottle, <em style={{ color: "var(--sand)" }}>delivered as if by hand</em>.
         </h2>
         <div style={{ display: "inline-flex", gap: 14, flexWrap: "wrap", justifyContent: "center", marginTop: 12 }}>
-          <Link to={p.primaryCta.to} className="btn-outline">{p.primaryCta.label} <ArrowRight size={11} /></Link>
+          <Link to={p.primaryCta.to as any} className="btn-outline">{p.primaryCta.label} <ArrowRight size={11} /></Link>
           <a href={wa} target="_blank" rel="noreferrer" className="btn-text" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
             <MessageCircle size={14} /> WhatsApp the concierge
           </a>
