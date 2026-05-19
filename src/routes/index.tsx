@@ -5,17 +5,24 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "Souk Privé — Where Quality Lives" }] }),
+  head: () => ({
+    meta: [
+      { title: "Souk Privé — Scent, kept private." },
+      { name: "description", content: "A small house of rare fragrances and rested Arabian oils. Sourced quietly, sealed by hand, sent to the few who notice." },
+      { property: "og:title", content: "Souk Privé — Scent, kept private." },
+      { property: "og:description", content: "For people who don't wear scent for the room. Rare bottles, rested oud, concierge by WhatsApp." },
+    ],
+  }),
   component: Home,
 });
 
 const TRUST = [
-  "Authenticity Guaranteed",
-  "Globally Sourced",
-  "Concierge Service",
-  "Discreet Shipping",
-  "Hand-checked",
-  "Privately Curated",
+  "Sealed by hand",
+  "Rested, not rushed",
+  "Sourced at the still",
+  "Sent in plain paper",
+  "A real person on WhatsApp",
+  "No mailing list noise",
 ];
 
 function Home() {
