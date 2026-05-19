@@ -241,12 +241,12 @@ function Home() {
       {/* LEAD CAPTURE */}
       <section style={{ padding: "clamp(80px,10vw,140px) clamp(24px,5vw,80px)", background: "var(--espresso)" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-          <div className="eyebrow" style={{ justifyContent: "center", marginBottom: 16 }}>Privately invited · 08</div>
+          <div className="eyebrow" style={{ justifyContent: "center", marginBottom: 16 }}>By invitation</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 16 }}>
-            Quiet <em>letters</em>, never noisy.
+            One letter a month. <em>Nothing</em> else.
           </h2>
-          <p style={{ color: "rgba(245,240,232,0.55)", marginBottom: 32, lineHeight: 1.8 }}>
-            One short note a month — new arrivals, vintage finds, and concierge appointments. We never share your address.
+          <p style={{ color: "rgba(245,240,232,0.6)", marginBottom: 32, lineHeight: 1.8 }}>
+            New arrivals before the shelf knows. Vintage finds. A line from the concierge. No tracking pixels, no second list.
           </p>
           <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", gap: 0, maxWidth: 480, margin: "0 auto", borderBottom: "1px solid rgba(196,181,160,0.4)" }}>
             <input required type="email" placeholder="Your email" style={{ flex: 1, background: "transparent", border: "none", padding: "14px 0", color: "var(--ivory)", fontSize: 14, outline: "none", textAlign: "center" }} />
