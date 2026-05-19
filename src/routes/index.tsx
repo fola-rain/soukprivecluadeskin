@@ -5,17 +5,24 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "Souk Privé — Where Quality Lives" }] }),
+  head: () => ({
+    meta: [
+      { title: "Souk Privé — Scent, kept private." },
+      { name: "description", content: "A small house of rare fragrances and rested Arabian oils. Sourced quietly, sealed by hand, sent to the few who notice." },
+      { property: "og:title", content: "Souk Privé — Scent, kept private." },
+      { property: "og:description", content: "For people who don't wear scent for the room. Rare bottles, rested oud, concierge by WhatsApp." },
+    ],
+  }),
   component: Home,
 });
 
 const TRUST = [
-  "Authenticity Guaranteed",
-  "Globally Sourced",
-  "Concierge Service",
-  "Discreet Shipping",
-  "Hand-checked",
-  "Privately Curated",
+  "Sealed by hand",
+  "Rested, not rushed",
+  "Sourced at the still",
+  "Sent in plain paper",
+  "A real person on WhatsApp",
+  "No mailing list noise",
 ];
 
 function Home() {
@@ -27,17 +34,17 @@ function Home() {
         <img src={HERO_IMAGE} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.7 }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(14,12,10,0.55) 0%, transparent 35%, rgba(14,12,10,0.95) 100%)" }} />
         <div style={{ position: "relative", zIndex: 2, padding: "0 clamp(24px,5vw,80px) clamp(56px,8vw,96px)", maxWidth: 1440, margin: "0 auto", width: "100%" }}>
-          <div className="eyebrow" style={{ marginBottom: 24 }}>House N°01 · Est. 2026</div>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(3rem, 9vw, 8.5rem)", fontWeight: 300, lineHeight: 0.95, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: 900 }}>
-            <span style={{ color: "var(--ivory)" }}>Where quality </span>
-            <span style={{ fontStyle: "italic", color: "rgba(245,240,232,0.6)" }}>lives.</span>
+          <div className="eyebrow" style={{ marginBottom: 24 }}>A small house · Est. MMXXVI</div>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(3rem, 9vw, 8.5rem)", fontWeight: 300, lineHeight: 0.95, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: 1000 }}>
+            <span style={{ color: "var(--ivory)" }}>You don't wear it </span>
+            <span style={{ fontStyle: "italic", color: "rgba(245,240,232,0.6)" }}>for the room.</span>
           </h1>
-          <p style={{ fontSize: "clamp(0.9rem, 1.2vw, 1rem)", lineHeight: 1.8, color: "rgba(245,240,232,0.55)", maxWidth: 480, marginBottom: 36 }}>
-            A quietly curated house of luxury fragrances and rare Arabian oils — sourced from old houses in Hejaz, Grasse, and Paris, then delivered as if by hand.
+          <p style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", lineHeight: 1.8, color: "rgba(245,240,232,0.65)", maxWidth: 520, marginBottom: 36 }}>
+            Scent is the most private thing you own. We keep a small house of rare bottles and rested Arabian oils — sourced quietly from Hejaz, Grasse and Paris, and sent to the few who notice the difference.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link to="/shop" className="btn-outline">Enter the Shop <ArrowRight size={11} /></Link>
-            <Link to="/find-my-product" className="btn-text">Find your scent →</Link>
+            <Link to="/shop" className="btn-outline">Step inside <ArrowRight size={11} /></Link>
+            <Link to="/find-my-product" className="btn-text">Help me choose →</Link>
           </div>
         </div>
         <div style={{ position: "absolute", bottom: "clamp(32px,5vw,52px)", right: "clamp(20px,4vw,56px)", fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(196,181,160,0.4)", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
@@ -54,13 +61,32 @@ function Home() {
         </div>
       </div>
 
+      {/* MANIFESTO — brand stance */}
+      <section style={{ padding: "clamp(96px,14vw,180px) clamp(24px,5vw,80px)", background: "var(--ink)", color: "var(--ivory)", borderTop: "1px solid var(--border-dk)" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div className="eyebrow" style={{ marginBottom: 28 }}>The house, in one breath</div>
+          <p style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.6rem, 3.4vw, 2.8rem)", lineHeight: 1.3, letterSpacing: "-0.01em", color: "var(--ivory)" }}>
+            We're against the perfume aisle. Against the rush, the relabel, the loud launch.{" "}
+            <span style={{ color: "rgba(245,240,232,0.55)" }}>
+              Souk Privé is a small house for people who treat scent like a letter — written once, sealed slowly, given only to those who'll read it twice.
+            </span>
+          </p>
+          <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
+            <Link to="/about" className="btn-text">Read our quiet manifesto →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* COLLECTIONS */}
       <section style={{ padding: "clamp(80px,12vw,160px) clamp(24px,5vw,80px)", background: "var(--linen)", color: "var(--ink)" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-          <div className="eyebrow dim">The Edits · 03</div>
-          <h2 className="section-hl" style={{ marginBottom: 56, maxWidth: 800 }}>
-            Three rooms in the <em>private</em> souk.
+          <div className="eyebrow dim">Three rooms · 02</div>
+          <h2 className="section-hl" style={{ marginBottom: 24, maxWidth: 800 }}>
+            Choose the <em>mood</em>, not the marketing.
           </h2>
+          <p style={{ color: "var(--muted)", lineHeight: 1.8, maxWidth: 520, marginBottom: 56 }}>
+            We don't organise the shelf by brand. We organise it by the evening you're walking into.
+          </p>
           <div style={{ display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 2 }}>
             <Link to={COLLECTIONS[0].href} style={{ position: "relative", gridRow: "span 2", overflow: "hidden", background: "var(--ivory2)" }}>
               <img src={COLLECTIONS[0].image} alt={COLLECTIONS[0].name} style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "3/4", transition: "transform 1.2s var(--ease-silk)" }} loading="lazy" />
@@ -88,9 +114,9 @@ function Home() {
       <section style={{ padding: "clamp(80px,12vw,160px) 0", background: "var(--ink)" }}>
         <div style={{ padding: "0 clamp(24px,5vw,80px)", display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, marginBottom: 48, maxWidth: 1440, margin: "0 auto 48px" }}>
           <div>
-            <div className="eyebrow">House Bestsellers · 02</div>
+            <div className="eyebrow">Kept on the shelf · 03</div>
             <h2 className="section-hl" style={{ maxWidth: 700, color: "var(--ivory)" }}>
-              The bottles that <em>stay</em> on the shelf.
+              The bottles people <em>come back</em> for.
             </h2>
           </div>
           <Link to="/shop" className="btn-text">View all →</Link>
@@ -108,12 +134,12 @@ function Home() {
           Request.
         </div>
         <div style={{ position: "relative", maxWidth: 720 }}>
-          <div className="eyebrow" style={{ marginBottom: 16 }}>Concierge · 03</div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>Concierge · 04</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 24 }}>
-            Looking for something <em>specific?</em>
+            If we don't carry it, <em>we'll find it.</em>
           </h2>
-          <p style={{ color: "rgba(245,240,232,0.55)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
-            A discontinued vintage. A regional exclusive. A scent your mother wore. Tell us, and our concierge will find it — quietly, anywhere in the world.
+          <p style={{ color: "rgba(245,240,232,0.6)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
+            A discontinued vintage. A regional exclusive. The bottle your mother kept on her dressing table. Send us a single line — a real person answers, and we go looking.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Link to="/request-a-product" className="btn-outline">Submit a request <ArrowRight size={11} /></Link>
@@ -128,12 +154,12 @@ function Home() {
       <section style={{ padding: "clamp(80px,12vw,160px) clamp(24px,5vw,80px)", background: "var(--linen)", color: "var(--ink)" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 8vw, 96px)", alignItems: "center" }}>
           <div>
-            <div className="eyebrow dim">Find My Product · 04</div>
+            <div className="eyebrow dim">Find your scent · 05</div>
             <h2 className="section-hl" style={{ marginBottom: 24 }}>
-              Five quiet questions, <em>one</em> bottle.
+              Five quiet questions. <em>One</em> bottle that feels like yours.
             </h2>
             <p style={{ color: "var(--muted)", marginBottom: 32, lineHeight: 1.8, maxWidth: 460 }}>
-              Tell us about the room, the season, and the moment. Our recommendation engine — built with our perfumers — returns three bottles, ranked.
+              Not an algorithm guessing your mood — a short conversation, then three bottles ranked by the same people who source them.
             </p>
             <Link to="/find-my-product" className="btn-dark"><Sparkles size={12} /> Begin the quiz →</Link>
           </div>
@@ -150,9 +176,9 @@ function Home() {
       {/* TESTIMONIALS */}
       <section style={{ padding: "clamp(80px,12vw,140px) 0", background: "var(--ink)", overflow: "hidden" }}>
         <div style={{ padding: "0 clamp(24px,5vw,80px)", maxWidth: 1440, margin: "0 auto" }}>
-          <div className="eyebrow">Whispers · 05</div>
+          <div className="eyebrow">From people who notice · 06</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 56, maxWidth: 700 }}>
-            What's said <em>quietly</em>.
+            Said in <em>private</em>, not for the algorithm.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32 }}>
             {TESTIMONIALS.map((t, i) => (
@@ -215,12 +241,12 @@ function Home() {
       {/* LEAD CAPTURE */}
       <section style={{ padding: "clamp(80px,10vw,140px) clamp(24px,5vw,80px)", background: "var(--espresso)" }}>
         <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
-          <div className="eyebrow" style={{ justifyContent: "center", marginBottom: 16 }}>Privately invited · 08</div>
+          <div className="eyebrow" style={{ justifyContent: "center", marginBottom: 16 }}>By invitation</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 16 }}>
-            Quiet <em>letters</em>, never noisy.
+            One letter a month. <em>Nothing</em> else.
           </h2>
-          <p style={{ color: "rgba(245,240,232,0.55)", marginBottom: 32, lineHeight: 1.8 }}>
-            One short note a month — new arrivals, vintage finds, and concierge appointments. We never share your address.
+          <p style={{ color: "rgba(245,240,232,0.6)", marginBottom: 32, lineHeight: 1.8 }}>
+            New arrivals before the shelf knows. Vintage finds. A line from the concierge. No tracking pixels, no second list.
           </p>
           <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", gap: 0, maxWidth: 480, margin: "0 auto", borderBottom: "1px solid rgba(196,181,160,0.4)" }}>
             <input required type="email" placeholder="Your email" style={{ flex: 1, background: "transparent", border: "none", padding: "14px 0", color: "var(--ivory)", fontSize: 14, outline: "none", textAlign: "center" }} />
