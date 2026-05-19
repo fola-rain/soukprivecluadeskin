@@ -134,12 +134,12 @@ function Home() {
           Request.
         </div>
         <div style={{ position: "relative", maxWidth: 720 }}>
-          <div className="eyebrow" style={{ marginBottom: 16 }}>Concierge · 03</div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>Concierge · 04</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 24 }}>
-            Looking for something <em>specific?</em>
+            If we don't carry it, <em>we'll find it.</em>
           </h2>
-          <p style={{ color: "rgba(245,240,232,0.55)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
-            A discontinued vintage. A regional exclusive. A scent your mother wore. Tell us, and our concierge will find it — quietly, anywhere in the world.
+          <p style={{ color: "rgba(245,240,232,0.6)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
+            A discontinued vintage. A regional exclusive. The bottle your mother kept on her dressing table. Send us a single line — a real person answers, and we go looking.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Link to="/request-a-product" className="btn-outline">Submit a request <ArrowRight size={11} /></Link>
