@@ -114,9 +114,9 @@ function Home() {
       <section style={{ padding: "clamp(80px,12vw,160px) 0", background: "var(--ink)" }}>
         <div style={{ padding: "0 clamp(24px,5vw,80px)", display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, marginBottom: 48, maxWidth: 1440, margin: "0 auto 48px" }}>
           <div>
-            <div className="eyebrow">House Bestsellers · 02</div>
+            <div className="eyebrow">Kept on the shelf · 03</div>
             <h2 className="section-hl" style={{ maxWidth: 700, color: "var(--ivory)" }}>
-              The bottles that <em>stay</em> on the shelf.
+              The bottles people <em>come back</em> for.
             </h2>
           </div>
           <Link to="/shop" className="btn-text">View all →</Link>
