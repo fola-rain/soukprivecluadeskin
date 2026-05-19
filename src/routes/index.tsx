@@ -154,12 +154,12 @@ function Home() {
       <section style={{ padding: "clamp(80px,12vw,160px) clamp(24px,5vw,80px)", background: "var(--linen)", color: "var(--ink)" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 8vw, 96px)", alignItems: "center" }}>
           <div>
-            <div className="eyebrow dim">Find My Product · 04</div>
+            <div className="eyebrow dim">Find your scent · 05</div>
             <h2 className="section-hl" style={{ marginBottom: 24 }}>
-              Five quiet questions, <em>one</em> bottle.
+              Five quiet questions. <em>One</em> bottle that feels like yours.
             </h2>
             <p style={{ color: "var(--muted)", marginBottom: 32, lineHeight: 1.8, maxWidth: 460 }}>
-              Tell us about the room, the season, and the moment. Our recommendation engine — built with our perfumers — returns three bottles, ranked.
+              Not an algorithm guessing your mood — a short conversation, then three bottles ranked by the same people who source them.
             </p>
             <Link to="/find-my-product" className="btn-dark"><Sparkles size={12} /> Begin the quiz →</Link>
           </div>
