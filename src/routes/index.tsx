@@ -61,13 +61,32 @@ function Home() {
         </div>
       </div>
 
+      {/* MANIFESTO — brand stance */}
+      <section style={{ padding: "clamp(96px,14vw,180px) clamp(24px,5vw,80px)", background: "var(--ink)", color: "var(--ivory)", borderTop: "1px solid var(--border-dk)" }}>
+        <div style={{ maxWidth: 980, margin: "0 auto" }}>
+          <div className="eyebrow" style={{ marginBottom: 28 }}>The house, in one breath</div>
+          <p style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.6rem, 3.4vw, 2.8rem)", lineHeight: 1.3, letterSpacing: "-0.01em", color: "var(--ivory)" }}>
+            We're against the perfume aisle. Against the rush, the relabel, the loud launch.{" "}
+            <span style={{ color: "rgba(245,240,232,0.55)" }}>
+              Souk Privé is a small house for people who treat scent like a letter — written once, sealed slowly, given only to those who'll read it twice.
+            </span>
+          </p>
+          <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
+            <Link to="/about" className="btn-text">Read our quiet manifesto →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* COLLECTIONS */}
       <section style={{ padding: "clamp(80px,12vw,160px) clamp(24px,5vw,80px)", background: "var(--linen)", color: "var(--ink)" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-          <div className="eyebrow dim">The Edits · 03</div>
-          <h2 className="section-hl" style={{ marginBottom: 56, maxWidth: 800 }}>
-            Three rooms in the <em>private</em> souk.
+          <div className="eyebrow dim">Three rooms · 02</div>
+          <h2 className="section-hl" style={{ marginBottom: 24, maxWidth: 800 }}>
+            Choose the <em>mood</em>, not the marketing.
           </h2>
+          <p style={{ color: "var(--muted)", lineHeight: 1.8, maxWidth: 520, marginBottom: 56 }}>
+            We don't organise the shelf by brand. We organise it by the evening you're walking into.
+          </p>
           <div style={{ display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 2 }}>
             <Link to={COLLECTIONS[0].href} style={{ position: "relative", gridRow: "span 2", overflow: "hidden", background: "var(--ivory2)" }}>
               <img src={COLLECTIONS[0].image} alt={COLLECTIONS[0].name} style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "3/4", transition: "transform 1.2s var(--ease-silk)" }} loading="lazy" />
