@@ -36,16 +36,17 @@ function Home() {
         <div style={{ position: "relative", zIndex: 2, padding: "0 clamp(24px,5vw,80px) clamp(56px,8vw,96px)", maxWidth: 1440, margin: "0 auto", width: "100%" }}>
           <div className="eyebrow" style={{ marginBottom: 24 }}>A small house · Est. MMXXVI</div>
           <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(3rem, 9vw, 8.5rem)", fontWeight: 300, lineHeight: 0.95, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: 1000 }}>
-            <span style={{ color: "var(--ivory)" }}>You don't wear it </span>
-            <span style={{ fontStyle: "italic", color: "rgba(245,240,232,0.6)" }}>for the room.</span>
+            <span style={{ color: "var(--ivory)" }}>Scent, </span>
+            <span style={{ fontStyle: "italic", color: "rgba(245,240,232,0.6)" }}>kept private.</span>
           </h1>
           <p style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", lineHeight: 1.8, color: "rgba(245,240,232,0.65)", maxWidth: 520, marginBottom: 36 }}>
-            Scent is the most private thing you own. We keep a small house of rare bottles and rested Arabian oils — sourced quietly from Hejaz, Grasse and Paris, and sent to the few who notice the difference.
+            Rare bottles. Rested oud. Sent to the few who notice.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Link to="/shop" className="btn-outline">Step inside <ArrowRight size={11} /></Link>
             <Link to="/find-my-product" className="btn-text">Help me choose →</Link>
           </div>
+
         </div>
         <div style={{ position: "absolute", bottom: "clamp(32px,5vw,52px)", right: "clamp(20px,4vw,56px)", fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(196,181,160,0.4)", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
           Souk Privé · MMXXVI
