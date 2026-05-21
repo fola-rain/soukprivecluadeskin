@@ -150,29 +150,6 @@ function Home() {
         </div>
       </section>
 
-      {/* QUIZ TEASER */}
-      <section style={{ padding: "clamp(80px,12vw,160px) clamp(24px,5vw,80px)", background: "var(--linen)", color: "var(--ink)" }}>
-        <div style={{ maxWidth: 1440, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 8vw, 96px)", alignItems: "center" }}>
-          <div>
-            <div className="eyebrow dim">Find your scent · 05</div>
-            <h2 className="section-hl" style={{ marginBottom: 24 }}>
-              Five quiet questions. <em>One</em> bottle that feels like yours.
-            </h2>
-            <p style={{ color: "var(--muted)", marginBottom: 32, lineHeight: 1.8, maxWidth: 460 }}>
-              Not an algorithm guessing your mood — a short conversation, then three bottles ranked by the same people who source them.
-            </p>
-            <Link to="/find-my-product" className="btn-dark"><Sparkles size={12} /> Begin the quiz →</Link>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
-            {bestsellers().slice(0, 3).map((p, i) => (
-              <div key={p.slug} style={{ aspectRatio: "3/4", overflow: "hidden", background: "var(--ivory2)", transform: `translateY(${i * 18}px)` }}>
-                <img src={p.image} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* TESTIMONIALS */}
       <section style={{ padding: "clamp(80px,12vw,140px) 0", background: "var(--ink)", overflow: "hidden" }}>
         <div style={{ padding: "0 clamp(24px,5vw,80px)", maxWidth: 1440, margin: "0 auto" }}>
