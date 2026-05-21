@@ -67,15 +67,16 @@ function Home() {
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <div className="eyebrow" style={{ marginBottom: 28 }}>The house, in one breath</div>
           <p style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.6rem, 3.4vw, 2.8rem)", lineHeight: 1.3, letterSpacing: "-0.01em", color: "var(--ivory)" }}>
-            We're against the perfume aisle. Against the rush, the relabel, the loud launch.{" "}
+            Not the aisle. Not the rush.{" "}
             <span style={{ color: "rgba(245,240,232,0.55)" }}>
-              Souk Privé is a small house for people who treat scent like a letter — written once, sealed slowly, given only to those who'll read it twice.
+              A small house for people who treat scent like a letter — sealed slowly, given quietly.
             </span>
           </p>
           <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link to="/about" className="btn-text">Read our quiet manifesto →</Link>
+            <Link to="/about" className="btn-text">Our manifesto →</Link>
           </div>
         </div>
+
       </section>
 
       {/* COLLECTIONS */}
