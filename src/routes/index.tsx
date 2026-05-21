@@ -153,7 +153,7 @@ function Home() {
       {/* TESTIMONIALS */}
       <section style={{ padding: "clamp(80px,12vw,140px) 0", background: "var(--ink)", overflow: "hidden" }}>
         <div style={{ padding: "0 clamp(24px,5vw,80px)", maxWidth: 1440, margin: "0 auto" }}>
-          <div className="eyebrow">From people who notice · 06</div>
+          <div className="eyebrow">From people who notice · 05</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 56, maxWidth: 700 }}>
             Said in <em>private</em>, not for the algorithm.
           </h2>
