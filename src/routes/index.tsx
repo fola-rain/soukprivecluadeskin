@@ -136,15 +136,15 @@ function Home() {
         <div style={{ position: "relative", maxWidth: 720 }}>
           <div className="eyebrow" style={{ marginBottom: 16 }}>Find your scent · 04</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 24 }}>
-            Five quiet questions. <em>One bottle that feels like yours.</em>
+            Find your scent.
           </h2>
           <p style={{ color: "rgba(245,240,232,0.6)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
-            Not an algorithm guessing your mood — a short, considered conversation. Tell us how you live, work, and dress, and we'll point you to a single composition worth keeping.
+            Five questions. One bottle. No algorithms.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Link to="/find-my-product" className="btn-outline">Take the quiz <Sparkles size={11} /></Link>
-            <a href={whatsappLink("Hello Souk Privé — can you help me find my scent?")} className="btn-text" target="_blank" rel="noreferrer">
-              <MessageCircle size={11} /> Or ask the concierge
+            <a href={whatsappLink("Hello — help me find my scent.")} className="btn-text" target="_blank" rel="noreferrer">
+              <MessageCircle size={11} /> Ask the concierge
             </a>
           </div>
         </div>
