@@ -119,8 +119,9 @@ function Home() {
           <div>
             <div className="eyebrow">Kept on the shelf · 03</div>
             <h2 className="section-hl" style={{ maxWidth: 700, color: "var(--ivory)" }}>
-              The bottles people <em>come back</em> for.
+              Worn <em>again</em>.
             </h2>
+
           </div>
           <Link to="/shop" className="btn-text">View all →</Link>
         </div>
