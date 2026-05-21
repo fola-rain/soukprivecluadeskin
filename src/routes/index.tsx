@@ -36,16 +36,17 @@ function Home() {
         <div style={{ position: "relative", zIndex: 2, padding: "0 clamp(24px,5vw,80px) clamp(56px,8vw,96px)", maxWidth: 1440, margin: "0 auto", width: "100%" }}>
           <div className="eyebrow" style={{ marginBottom: 24 }}>A small house · Est. MMXXVI</div>
           <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(3rem, 9vw, 8.5rem)", fontWeight: 300, lineHeight: 0.95, letterSpacing: "-0.02em", marginBottom: 28, maxWidth: 1000 }}>
-            <span style={{ color: "var(--ivory)" }}>You don't wear it </span>
-            <span style={{ fontStyle: "italic", color: "rgba(245,240,232,0.6)" }}>for the room.</span>
+            <span style={{ color: "var(--ivory)" }}>Scent, </span>
+            <span style={{ fontStyle: "italic", color: "rgba(245,240,232,0.6)" }}>kept private.</span>
           </h1>
           <p style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", lineHeight: 1.8, color: "rgba(245,240,232,0.65)", maxWidth: 520, marginBottom: 36 }}>
-            Scent is the most private thing you own. We keep a small house of rare bottles and rested Arabian oils — sourced quietly from Hejaz, Grasse and Paris, and sent to the few who notice the difference.
+            Rare bottles. Rested oud. Sent to the few who notice.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <Link to="/shop" className="btn-outline">Step inside <ArrowRight size={11} /></Link>
             <Link to="/find-my-product" className="btn-text">Help me choose →</Link>
           </div>
+
         </div>
         <div style={{ position: "absolute", bottom: "clamp(32px,5vw,52px)", right: "clamp(20px,4vw,56px)", fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(196,181,160,0.4)", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
           Souk Privé · MMXXVI
@@ -66,15 +67,16 @@ function Home() {
         <div style={{ maxWidth: 980, margin: "0 auto" }}>
           <div className="eyebrow" style={{ marginBottom: 28 }}>The house, in one breath</div>
           <p style={{ fontFamily: "var(--font-serif)", fontWeight: 300, fontSize: "clamp(1.6rem, 3.4vw, 2.8rem)", lineHeight: 1.3, letterSpacing: "-0.01em", color: "var(--ivory)" }}>
-            We're against the perfume aisle. Against the rush, the relabel, the loud launch.{" "}
+            Not the aisle. Not the rush.{" "}
             <span style={{ color: "rgba(245,240,232,0.55)" }}>
-              Souk Privé is a small house for people who treat scent like a letter — written once, sealed slowly, given only to those who'll read it twice.
+              A small house for people who treat scent like a letter — sealed slowly, given quietly.
             </span>
           </p>
           <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link to="/about" className="btn-text">Read our quiet manifesto →</Link>
+            <Link to="/about" className="btn-text">Our manifesto →</Link>
           </div>
         </div>
+
       </section>
 
       {/* COLLECTIONS */}
@@ -82,11 +84,12 @@ function Home() {
         <div style={{ maxWidth: 1440, margin: "0 auto" }}>
           <div className="eyebrow dim">Three rooms · 02</div>
           <h2 className="section-hl" style={{ marginBottom: 24, maxWidth: 800 }}>
-            Choose the <em>mood</em>, not the marketing.
+            Choose the <em>mood</em>.
           </h2>
           <p style={{ color: "var(--muted)", lineHeight: 1.8, maxWidth: 520, marginBottom: 56 }}>
-            We don't organise the shelf by brand. We organise it by the evening you're walking into.
+            Shelved by evening, not by brand.
           </p>
+
           <div style={{ display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 2 }}>
             <Link to={COLLECTIONS[0].href} style={{ position: "relative", gridRow: "span 2", overflow: "hidden", background: "var(--ivory2)" }}>
               <img src={COLLECTIONS[0].image} alt={COLLECTIONS[0].name} style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "3/4", transition: "transform 1.2s var(--ease-silk)" }} loading="lazy" />
@@ -116,8 +119,9 @@ function Home() {
           <div>
             <div className="eyebrow">Kept on the shelf · 03</div>
             <h2 className="section-hl" style={{ maxWidth: 700, color: "var(--ivory)" }}>
-              The bottles people <em>come back</em> for.
+              Worn <em>again</em>.
             </h2>
+
           </div>
           <Link to="/shop" className="btn-text">View all →</Link>
         </div>
@@ -155,8 +159,9 @@ function Home() {
         <div style={{ padding: "0 clamp(24px,5vw,80px)", maxWidth: 1440, margin: "0 auto" }}>
           <div className="eyebrow">From people who notice · 05</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 56, maxWidth: 700 }}>
-            Said in <em>private</em>, not for the algorithm.
+            Said in <em>private</em>.
           </h2>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32 }}>
             {TESTIMONIALS.map((t, i) => (
               <figure key={i} style={{ borderTop: "1px solid var(--border-dk)", paddingTop: 24 }}>
@@ -220,11 +225,12 @@ function Home() {
         <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
           <div className="eyebrow" style={{ justifyContent: "center", marginBottom: 16 }}>By invitation</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 16 }}>
-            One letter a month. <em>Nothing</em> else.
+            One letter. <em>Nothing</em> else.
           </h2>
           <p style={{ color: "rgba(245,240,232,0.6)", marginBottom: 32, lineHeight: 1.8 }}>
-            New arrivals before the shelf knows. Vintage finds. A line from the concierge. No tracking pixels, no second list.
+            New arrivals. Vintage finds. Once a month.
           </p>
+
           <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", gap: 0, maxWidth: 480, margin: "0 auto", borderBottom: "1px solid rgba(196,181,160,0.4)" }}>
             <input required type="email" placeholder="Your email" style={{ flex: 1, background: "transparent", border: "none", padding: "14px 0", color: "var(--ivory)", fontSize: 14, outline: "none", textAlign: "center" }} />
             <button type="submit" className="btn-text" style={{ paddingRight: 0 }}>Subscribe →</button>
