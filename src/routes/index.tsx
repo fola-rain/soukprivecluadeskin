@@ -159,8 +159,9 @@ function Home() {
         <div style={{ padding: "0 clamp(24px,5vw,80px)", maxWidth: 1440, margin: "0 auto" }}>
           <div className="eyebrow">From people who notice · 05</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 56, maxWidth: 700 }}>
-            Said in <em>private</em>, not for the algorithm.
+            Said in <em>private</em>.
           </h2>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32 }}>
             {TESTIMONIALS.map((t, i) => (
               <figure key={i} style={{ borderTop: "1px solid var(--border-dk)", paddingTop: 24 }}>
