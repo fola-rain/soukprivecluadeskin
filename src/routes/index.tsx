@@ -128,47 +128,24 @@ function Home() {
         </div>
       </section>
 
-      {/* REQUEST */}
+      {/* FIND MY SCENT */}
       <section style={{ minHeight: "60vh", background: "var(--espresso)", display: "flex", alignItems: "center", padding: "clamp(80px,12vw,140px) clamp(24px,5vw,80px)", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "50%", right: "-4%", transform: "translateY(-50%)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "clamp(8rem, 20vw, 18rem)", fontWeight: 300, color: "rgba(196,181,160,0.05)", lineHeight: 1, pointerEvents: "none" }}>
-          Request.
+          Discover.
         </div>
         <div style={{ position: "relative", maxWidth: 720 }}>
-          <div className="eyebrow" style={{ marginBottom: 16 }}>Concierge · 04</div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>Find your scent · 04</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 24 }}>
-            If we don't carry it, <em>we'll find it.</em>
+            Five quiet questions. <em>One bottle that feels like yours.</em>
           </h2>
           <p style={{ color: "rgba(245,240,232,0.6)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
-            A discontinued vintage. A regional exclusive. The bottle your mother kept on her dressing table. Send us a single line — a real person answers, and we go looking.
+            Not an algorithm guessing your mood — a short, considered conversation. Tell us how you live, work, and dress, and we'll point you to a single composition worth keeping.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link to="/request-a-product" className="btn-outline">Submit a request <ArrowRight size={11} /></Link>
-            <a href={whatsappLink("Hello Souk Privé — I'm looking for a specific fragrance.")} className="btn-text" target="_blank" rel="noreferrer">
-              <MessageCircle size={11} /> Or WhatsApp us
+            <Link to="/find-my-product" className="btn-outline">Take the quiz <Sparkles size={11} /></Link>
+            <a href={whatsappLink("Hello Souk Privé — can you help me find my scent?")} className="btn-text" target="_blank" rel="noreferrer">
+              <MessageCircle size={11} /> Or ask the concierge
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* QUIZ TEASER */}
-      <section style={{ padding: "clamp(80px,12vw,160px) clamp(24px,5vw,80px)", background: "var(--linen)", color: "var(--ink)" }}>
-        <div style={{ maxWidth: 1440, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 8vw, 96px)", alignItems: "center" }}>
-          <div>
-            <div className="eyebrow dim">Find your scent · 05</div>
-            <h2 className="section-hl" style={{ marginBottom: 24 }}>
-              Five quiet questions. <em>One</em> bottle that feels like yours.
-            </h2>
-            <p style={{ color: "var(--muted)", marginBottom: 32, lineHeight: 1.8, maxWidth: 460 }}>
-              Not an algorithm guessing your mood — a short conversation, then three bottles ranked by the same people who source them.
-            </p>
-            <Link to="/find-my-product" className="btn-dark"><Sparkles size={12} /> Begin the quiz →</Link>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
-            {bestsellers().slice(0, 3).map((p, i) => (
-              <div key={p.slug} style={{ aspectRatio: "3/4", overflow: "hidden", background: "var(--ivory2)", transform: `translateY(${i * 18}px)` }}>
-                <img src={p.image} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} loading="lazy" />
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -176,7 +153,7 @@ function Home() {
       {/* TESTIMONIALS */}
       <section style={{ padding: "clamp(80px,12vw,140px) 0", background: "var(--ink)", overflow: "hidden" }}>
         <div style={{ padding: "0 clamp(24px,5vw,80px)", maxWidth: 1440, margin: "0 auto" }}>
-          <div className="eyebrow">From people who notice · 06</div>
+          <div className="eyebrow">From people who notice · 05</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 56, maxWidth: 700 }}>
             Said in <em>private</em>, not for the algorithm.
           </h2>
