@@ -225,11 +225,12 @@ function Home() {
         <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
           <div className="eyebrow" style={{ justifyContent: "center", marginBottom: 16 }}>By invitation</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 16 }}>
-            One letter a month. <em>Nothing</em> else.
+            One letter. <em>Nothing</em> else.
           </h2>
           <p style={{ color: "rgba(245,240,232,0.6)", marginBottom: 32, lineHeight: 1.8 }}>
-            New arrivals before the shelf knows. Vintage finds. A line from the concierge. No tracking pixels, no second list.
+            New arrivals. Vintage finds. Once a month.
           </p>
+
           <form onSubmit={(e) => e.preventDefault()} style={{ display: "flex", gap: 0, maxWidth: 480, margin: "0 auto", borderBottom: "1px solid rgba(196,181,160,0.4)" }}>
             <input required type="email" placeholder="Your email" style={{ flex: 1, background: "transparent", border: "none", padding: "14px 0", color: "var(--ivory)", fontSize: 14, outline: "none", textAlign: "center" }} />
             <button type="submit" className="btn-text" style={{ paddingRight: 0 }}>Subscribe →</button>
