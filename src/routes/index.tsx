@@ -128,23 +128,23 @@ function Home() {
         </div>
       </section>
 
-      {/* REQUEST */}
+      {/* FIND MY SCENT */}
       <section style={{ minHeight: "60vh", background: "var(--espresso)", display: "flex", alignItems: "center", padding: "clamp(80px,12vw,140px) clamp(24px,5vw,80px)", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", top: "50%", right: "-4%", transform: "translateY(-50%)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "clamp(8rem, 20vw, 18rem)", fontWeight: 300, color: "rgba(196,181,160,0.05)", lineHeight: 1, pointerEvents: "none" }}>
-          Request.
+          Discover.
         </div>
         <div style={{ position: "relative", maxWidth: 720 }}>
-          <div className="eyebrow" style={{ marginBottom: 16 }}>Concierge · 04</div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>Find your scent · 04</div>
           <h2 className="section-hl" style={{ color: "var(--ivory)", marginBottom: 24 }}>
-            If we don't carry it, <em>we'll find it.</em>
+            Five quiet questions. <em>One bottle that feels like yours.</em>
           </h2>
           <p style={{ color: "rgba(245,240,232,0.6)", maxWidth: 520, marginBottom: 32, lineHeight: 1.8 }}>
-            A discontinued vintage. A regional exclusive. The bottle your mother kept on her dressing table. Send us a single line — a real person answers, and we go looking.
+            Not an algorithm guessing your mood — a short, considered conversation. Tell us how you live, work, and dress, and we'll point you to a single composition worth keeping.
           </p>
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link to="/request-a-product" className="btn-outline">Submit a request <ArrowRight size={11} /></Link>
-            <a href={whatsappLink("Hello Souk Privé — I'm looking for a specific fragrance.")} className="btn-text" target="_blank" rel="noreferrer">
-              <MessageCircle size={11} /> Or WhatsApp us
+            <Link to="/find-my-product" className="btn-outline">Take the quiz <Sparkles size={11} /></Link>
+            <a href={whatsappLink("Hello Souk Privé — can you help me find my scent?")} className="btn-text" target="_blank" rel="noreferrer">
+              <MessageCircle size={11} /> Or ask the concierge
             </a>
           </div>
         </div>
