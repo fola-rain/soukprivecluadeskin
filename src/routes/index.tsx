@@ -84,11 +84,12 @@ function Home() {
         <div style={{ maxWidth: 1440, margin: "0 auto" }}>
           <div className="eyebrow dim">Three rooms · 02</div>
           <h2 className="section-hl" style={{ marginBottom: 24, maxWidth: 800 }}>
-            Choose the <em>mood</em>, not the marketing.
+            Choose the <em>mood</em>.
           </h2>
           <p style={{ color: "var(--muted)", lineHeight: 1.8, maxWidth: 520, marginBottom: 56 }}>
-            We don't organise the shelf by brand. We organise it by the evening you're walking into.
+            Shelved by evening, not by brand.
           </p>
+
           <div style={{ display: "grid", gridTemplateColumns: "1.35fr 1fr", gap: 2 }}>
             <Link to={COLLECTIONS[0].href} style={{ position: "relative", gridRow: "span 2", overflow: "hidden", background: "var(--ivory2)" }}>
               <img src={COLLECTIONS[0].image} alt={COLLECTIONS[0].name} style={{ width: "100%", height: "100%", objectFit: "cover", aspectRatio: "3/4", transition: "transform 1.2s var(--ease-silk)" }} loading="lazy" />
